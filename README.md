@@ -1,6 +1,6 @@
 # 🎮 Unblocked Games Repository
 
-Welcome to my **Unblocked Games Repo**! This is a  collection of web games. to run directly from your browser.
+Welcome to my **Unblocked Games Repo**! This is a  collection of web games to run directly from your browser.
 
 ## 🕹️ How to Play
 open the `games.html` file to launch it!
