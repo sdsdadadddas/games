@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student and Parent Sign In</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <style>
+    html, body { margin: 0; min-height: 100%; background: #07060f; font-family: "Segoe UI", Arial, sans-serif; color: #fff; }
+    #bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; }
+    .glow { position: fixed; border-radius: 50%; filter: blur(90px); opacity: 0.3; z-index: 0; pointer-events: none; }
+    .g1 { width: 420px; height: 420px; background: #7a2cff; top: -120px; left: -100px; animation: float1 14s ease-in-out infinite alternate; }
+    .g2 { width: 380px; height: 380px; background: #00b7ff; bottom: -120px; right: -80px; animation: float2 17s ease-in-out infinite alternate; }
+    @keyframes float1 { to { transform: translate(180px, 120px); } }
+    @keyframes float2 { to { transform: translate(-200px, -100px); } }
+    @keyframes shine { to { background-position: 300% 0; } }
+
+    button, .btn {
+      font-family: inherit; color: #fff; cursor: pointer; text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s, border-color 0.15s;
+    }
+
+    /* ---------- header ---------- */
+    #top {
+      position: sticky; top: 0; z-index: 5;
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      padding: 12px 20px;
+      background: rgba(10, 8, 22, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    #logo {
+      font-size: 1.7rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;
+      background: linear-gradient(90deg, #00e5ff, #a855f7, #ff4ecd, #00e5ff);
+      background-size: 300% 100%;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      animation: shine 6s linear infinite;
+    }
+    #search {
+      flex: 1 1 240px; max-width: 520px; margin: 0 auto;
+      box-sizing: border-box; padding: 11px 18px 11px 42px;
+      font-size: 1rem; color: #fff; font-family: inherit;
+      background: rgba(255, 255, 255, 0.07) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23aab' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E") no-repeat 15px center;
+      border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 999px; outline: none;
+    }
+    #search:focus { border-color: #00e5ff; box-shadow: 0 0 14px rgba(0, 229, 255, 0.45); }
+    #search::placeholder { color: rgba(255, 255, 255, 0.45); }
+    #browsersBtn, #gameSitesBtn {
+      padding: 10px 20px; font-size: 0.95rem; font-weight: 600;
+      background: linear-gradient(135deg, #7a2cff, #c026d3);
+      border: none; border-radius: 999px;
+      line-height: 1.2; white-space: nowrap;
+    }
+    #browsersBtn:hover, #browsersBtn.active,
+    #gameSitesBtn:hover, #gameSitesBtn.active {
+      box-shadow: 0 0 18px #a855f7; transform: translateY(-2px);
+    }
+    
+    /* ---------- Pop-out browser menu ---------- */
+    #browserPopup {
+      display: none; position: fixed; z-index: 20; top: 76px; right: 20px;
+      width: min(320px, calc(100vw - 40px));
+      box-sizing: border-box; padding: 16px; border: 1px solid rgba(168, 85, 247, .65); border-radius: 16px;
+      background: rgba(15, 12, 32, .98); box-shadow: 0 12px 40px rgba(0,0,0,.55), 0 0 20px rgba(168,85,247,.18);
+      backdrop-filter: blur(14px); flex-direction: column;
+    }
+    #browserPopup.open { display: flex; }
+    #browserPopup .popupHead { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; font-weight:700; }
+    #browserPopup .popupControls { display:flex; flex-direction: column; gap:10px; }
+    #browserPopup .siteTab { width:100%; padding:10px 14px; border:1px solid rgba(255,255,255,.15); border-radius:999px; background:linear-gradient(135deg, #7a2cff, #c026d3); font-size:.95rem; font-weight:600; text-align: center; }
+    #browserPopup .siteTab:hover { box-shadow:0 0 14px #a855f7; transform:translateY(-1px); }
+    #browserPopup .popupClose { border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.08); border-radius:8px; padding:4px 9px; cursor: pointer; }
+
+    /* ---------- genre chips ---------- */
+    #chips {
+      position: relative; z-index: 2;
+      display: flex; gap: 10px; overflow-x: auto; padding: 16px 20px 4px;
+      max-width: 1300px; margin: 0 auto; scrollbar-width: none;
+    }
+    #chips::-webkit-scrollbar { display: none; }
+    .chip {
+      flex: none; padding: 8px 18px; font-size: 0.9rem; border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .chip:hover { border-color: #00e5ff; }
+    .chip.active { background: linear-gradient(135deg, #00b7ff, #7a2cff); border-color: transparent; font-weight: 600; }
+
+    /* ---------- sections ---------- */
+    #content { position: relative; z-index: 1; max-width: 1300px; margin: 0 auto; padding-bottom: 60px; }
+    .sec h2 {
+      display: flex; align-items: center; gap: 10px;
+      margin: 28px 20px 14px; font-size: 1.35rem; letter-spacing: 0.5px;
+    }
+    .sec h2::before { content: ""; width: 5px; height: 22px; border-radius: 3px; background: linear-gradient(#00e5ff, #a855f7); }
+    .sec h2 span { font-size: 0.85rem; font-weight: 400; opacity: 0.5; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; padding: 0 20px; }
+
+    /* ---------- game cards ---------- */
+    .card {
+      display: block; padding: 0; text-align: left; overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px;
+      content-visibility: auto; contain-intrinsic-size: 200px 170px;
+    }
+    .card:hover { transform: translateY(-5px); border-color: #00e5ff; box-shadow: 0 8px 26px rgba(0, 229, 255, 0.35); }
+    .card { min-height: 64px; padding: 14px 16px; text-align: left; }
+    .meta { padding: 9px 11px 11px; }
+    .gname { display: block; font-size: 0.92rem; font-weight: 600; line-height: 1.25; word-break: break-word; }
+    .tag {
+      display: inline-block; margin-top: 6px; padding: 2px 9px; font-size: 0.68rem;
+      border-radius: 999px; background: rgba(168, 85, 247, 0.28); color: #e6d3ff;
+    }
+    #empty { text-align: center; opacity: 0.6; grid-column: 1 / -1; padding: 30px 0; }
+
+    /* ---------- game viewer ---------- */
+    #overlay { display: none; position: fixed; inset: 0; background: #000; z-index: 10; }
+    #overlay iframe { width: 100%; height: 100%; border: none; }
+    #bar { position: absolute; top: 10px; right: 10px; display: flex; gap: 8px; z-index: 11; }
+    #bar button, #bar .btn {
+      padding: 8px 16px; font-size: 0.9rem; background: rgba(0,0,0,0.75);
+      border: 1px solid rgba(255,255,255,0.35); border-radius: 10px;
+    }
+    #bar button:hover, #bar .btn:hover { border-color: #00e5ff; box-shadow: 0 0 14px #00e5ff; }
+  </style>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+
+  <header id="top">
+    <div id="logo">Games</div>
+    <input id="search" type="search" placeholder="Search games..." autocomplete="off">
+    <button id="browsersBtn">Browsers</button>
+    <button id="gameSitesBtn">Game Sites</button>
+  </header>
+
+  <!-- Pop-out Menu -->
+  <div id="browserPopup" role="dialog" aria-label="Browsers" aria-modal="false">
+    <div class="popupHead"><span>Tools & Browsers</span><button class="popupClose" id="closeBrowsers" aria-label="Close browsers popup">✕</button></div>
+    <div class="popupControls">
+      <button class="siteTab" id="solaraTab" data-url="https://s3.amazonaws.com/caddyprep/index.html">Solara</button>
+      <button class="siteTab" id="studyHubTab" data-url="https://s3.amazonaws.com/kj0e/index.html">Study Hub</button>
+    </div>
+  </div>
+
+  <nav id="chips"></nav>
+
+  <div id="content">
+    <section class="sec">
+      <h2>&#127918; All Games <span id="count"></span></h2>
+      <div id="grid" class="grid"></div>
+    </section>
+  </div>
+
+  <div id="overlay">
+    <div id="bar">
+      <a id="newtab" class="btn" target="_blank" rel="noopener">Open in new tab</a>
+      <button id="close">Close game</button>
+    </div>
+    <iframe id="frame" title="Site viewer" allow="fullscreen; autoplay" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    const MY = "https://sdsdadadddas.github.io/games";
+
+    // [name, url, source]
+    const all = [
+      // Your own games
+      ["Thunder Front", MY + "/thunder-front.html", ""],
+
+      // Game sites
+      ["Class 80x (450+ games)", "https://class-80x.github.io/", "Class 80x"],
+      ["Project Hub (site)", "https://hub-pro.github.io/games", "Project Hub"],
+      ["Engineering.com (site)", "https://www.engineering.com/games/", "Engineering.com"],
+
+      // Original list
+      ["Freezenova", "https://unblocked-games.s3.amazonaws.com/index.html", ""],
+      ["Engineering.com", "https://www.engineering.com/games/", ""],
+      ["Block Blast", "https://www.engineering.com/games/block-blast/", ""],
+      ["Temple Run", "https://games.engineering.com/temple-run-2/index.html", ""],
+      ["Learn 2 Fly", "https://www.learntofly4.net/play-learn-to-fly-4/", ""],
+      ["Drift Boss", "https://www.mortgagecalculator.org/money-games/drift-boss/", ""],
+      ["Web Dashers (GD)", "https://web-dashers.github.io/", ""],
+      ["Sled Rider", "https://www.snowrider3d.school/", ""],
+      ["Drive Mad", "https://drivegame.io/#google_vignette", ""],
+      ["Slope", "https://hub-pro.github.io/games/slope/index.html", ""],
+      ["Project Hub", "https://hub-pro.github.io/games", ""],
+      ["Class 80x", "https://class-80x.github.io/", ""],
+      ["Kart Bros", "https://drivegame.io/kart-bros", ""],
+      ["Traffic Jam", "https://unblocked-games.s3.amazonaws.com/traffic-jam-3d.html", ""],
+
+      // Project Hub
+      ["Cookie Clicker", "https://hub-pro.github.io/cookie/index.html", "Project Hub"],
+      ["2048", "https://hub-pro.github.io/games/2048/index.html", "Project Hub"],
+      ["Mario", "https://hub-pro.github.io/games/mario/main.html", "Project Hub"],
+      ["Flappy Bird", "https://hub-pro.github.io/games/flappybird/index.html", "Project Hub"],
+      ["Tetris", "https://hub-pro.github.io/games/tetris/tetris.html", "Project Hub"],
+      ["Worlds Hardest Game", "https://hub-pro.github.io/games/hardestgame/index.html", "Project Hub"],
+      ["The Impossible Quiz", "https://hub-pro.github.io/games/impossiblequiz/index.html", "Project Hub"],
+      ["Sonic", "https://hub-pro.github.io/games/sonic/index.html", "Project Hub"],
+      ["Super Mario 63", "https://hub-pro.github.io/games/supermario63/index.html", "Project Hub"],
+      ["Breaking The Bank", "https://hub-pro.github.io/games/henrystickmin/breakingthebank/index.html", "Project Hub"],
+      ["Escaping The Prison", "https://hub-pro.github.io/games/henrystickmin/escapingtheprison/index.html", "Project Hub"],
+      ["Stealing The Diamond", "https://hub-pro.github.io/games/henrystickmin/stealingthediamond/index.html", "Project Hub"],
+      ["Infiltrating The Airship", "https://hub-pro.github.io/games/henrystickmin/infiltratingtheairship/index.html", "Project Hub"],
+      ["Fleeing The Complex", "https://hub-pro.github.io/games/henrystickmin/fleeingthecomplex/index.html", "Project Hub"],
+      ["Slope", "https://hub-pro.github.io/games/slope/index.html", "Project Hub"],
+      ["Friday Night Funkin'", "https://hub-pro.github.io/games/fridaynightfunkin/index.html", "Project Hub"],
+      ["Solitaire", "https://hub-pro.github.io/games/solitaire/index.html", "Project Hub"],
+      ["Wordle", "https://hub-pro.github.io/games/wordle/index.html", "Project Hub"],
+      ["Riddle School 1", "https://hub-pro.github.io/games/riddleschool/riddleschool1/index.html", "Project Hub"],
+      ["Riddle School 2", "https://hub-pro.github.io/games/riddleschool/riddleschool2/index.html", "Project Hub"],
+      ["Riddle School 3", "https://hub-pro.github.io/games/riddleschool/riddleschool3/index.html", "Project Hub"],
+      ["Riddle School 4", "https://hub-pro.github.io/games/riddleschool/riddleschool4/index.html", "Project Hub"],
+      ["Riddle School 5", "https://hub-pro.github.io/games/riddleschool/riddleschool5/index.html", "Project Hub"],
+      ["Riddle Transfer 1", "https://hub-pro.github.io/games/riddleschool/riddletransfer/index.html", "Project Hub"],
+      ["Riddle Transfer 2", "https://hub-pro.github.io/games/riddleschool/riddletransfer2/index.html", "Project Hub"],
+      ["Papa's Burgeria", "https://hub-pro.github.io/games/papas/papasburgeria/index.html", "Project Hub"],
+      ["Papa's Freezeria", "https://hub-pro.github.io/games/papas/papasfreezeria/", "Project Hub"],
+      ["Papa's Pizzeria", "https://hub-pro.github.io/games/papas/papaspizzeria/index.html", "Project Hub"],
+      ["Bloons TD 5", "https://hub-pro.github.io/games/bloonstd5/index.html", "Project Hub"],
+      ["Super Smash Flash", "https://hub-pro.github.io/games/supersmashflash/index.html", "Project Hub"],
+      ["Stickman Hook", "https://hub-pro.github.io/games/stickmanhook/index.html", "Project Hub"],
+      ["1v1.lol", "https://hub-pro.github.io/games/1v1lol/index.html", "Project Hub"],
+      ["Blockpost", "https://hub-pro.github.io/games/blockpost/index.html", "Project Hub"],
+      ["Rocket Soccer", "https://hub-pro.github.io/games/rocketsoccer/index.html", "Project Hub"],
+      ["Resent Client", "https://hub-pro.github.io/games/resentclient/index.html", "Project Hub"],
+      ["Minecraft: Classic", "https://hub-pro.github.io/games/minecraft/index.html", "Project Hub"],
+      ["CraftMine", "https://hub-pro.github.io/games/craftmine/index.html", "Project Hub"],
+      ["Run 1", "https://hub-pro.github.io/games/run/run1/index.html", "Project Hub"],
+      ["Run 2", "https://hub-pro.github.io/games/run/run2/index.html", "Project Hub"],
+      ["Run 3", "https://hub-pro.github.io/games/run/run3/index.html", "Project Hub"],
+      ["Super Mario Bros", "https://hub-pro.github.io/games/supermariobros/index.html", "Project Hub"],
+      ["Subway Surfers: San Fransisco", "https://hub-pro.github.io/games/subwaysurferssanfransisco/index.html", "Project Hub"],
+      ["Subway Surfers: Zurich", "https://hub-pro.github.io/games/subwaysurferszurich/index.html", "Project Hub"],
+      ["Temple Run 2", "https://hub-pro.github.io/games/templerun2/index.html", "Project Hub"],
+      ["Draw the Hill", "https://hub-pro.github.io/games/drawthehill/index.html", "Project Hub"],
+      ["Crossy Road", "https://hub-pro.github.io/games/crossyroad/index.html", "Project Hub"],
+      ["Cut The Rope", "https://hub-pro.github.io/games/cuttherope/index.html", "Project Hub"],
+      ["Stack", "https://hub-pro.github.io/games/stack/index.html", "Project Hub"],
+      ["Paper.io 2", "https://hub-pro.github.io/games/paperio2/index.html", "Project Hub"],
+      ["Jetpack Joyride", "https://hub-pro.github.io/games/jetpackjoyride/index.html", "Project Hub"],
+      ["Fruit Ninja", "https://hub-pro.github.io/games/fruitninja/index.html", "Project Hub"],
+      ["BitLife", "https://hub-pro.github.io/games/bitlife/index.html", "Project Hub"],
+      ["Dune", "https://hub-pro.github.io/games/dune/index.html", "Project Hub"],
+      ["Papery Planes", "https://hub-pro.github.io/games/paperyplanes/index.html", "Project Hub"],
+      ["Pokemon: Fire Red", "https://hub-pro.github.io/launcher.html#pokemonred", "Project Hub"],
+      ["Pokemon: Emerald", "https://hub-pro.github.io/launcher.html#pokemonemerald", "Project Hub"],
+      ["Animal Crossing: Wild World", "https://hub-pro.github.io/games/animalcrossingwildworld/index.html", "Project Hub"],
+      ["The Binding of Isaac", "https://hub-pro.github.io/games/thebindingofisaac/index.html", "Project Hub"],
+      ["Super Scribblenauts", "https://hub-pro.github.io/games/superscribblenauts/index.html", "Project Hub"],
+      ["Douchbag Life", "https://hub-pro.github.io/games/douchebag/douchebaglife/index.html", "Project Hub"],
+      ["Douchbag Workout 2", "https://hub-pro.github.io/games/douchebag/douchebagworkout2/index.html", "Project Hub"],
+      ["Duck Life 1", "https://hub-pro.github.io/games/ducklife/ducklife1/index.html", "Project Hub"],
+      ["Duck Life 2", "https://hub-pro.github.io/games/ducklife/ducklife2/index.html", "Project Hub"],
+      ["Duck Life 3", "https://hub-pro.github.io/games/ducklife/ducklife3/index.html", "Project Hub"],
+      ["Duck Life 4", "https://hub-pro.github.io/games/ducklife/ducklife4/index.html", "Project Hub"],
+      ["Super Mario 64", "https://hub-pro.github.io/games/supermario64/index.html", "Project Hub"],
+      ["Ace Attorney", "https://hub-pro.github.io/games/aceattorney/index.html", "Project Hub"],
+      ["Learn To Fly 1", "https://hub-pro.github.io/games/learntofly/learntofly1/index.html", "Project Hub"],
+      ["Learn To Fly 2", "https://hub-pro.github.io/games/learntofly/learntofly2/index.html", "Project Hub"],
+      ["Learn To Fly 3", "https://hub-pro.github.io/games/learntofly/learntofly3/index.html", "Project Hub"],
+      ["MotoX3M", "https://hub-pro.github.io/games/motox3m/index.html", "Project Hub"],
+      ["MotoX3M 2", "https://hub-pro.github.io/games/motox3m2/index.html", "Project Hub"],
+      ["There Is No Game", "https://hub-pro.github.io/games/thereisnogame/index.html", "Project Hub"],
+      ["Superhot", "https://hub-pro.github.io/games/superhot/index.html", "Project Hub"],
+      ["Fireboy & Watergirl 1", "https://hub-pro.github.io/games/fireboywatergirl/fireboywatergirl1/index.html", "Project Hub"],
+      ["Fireboy & Watergirl 2", "https://hub-pro.github.io/games/fireboywatergirl/fireboywatergirl2/index.html", "Project Hub"],
+      ["Fireboy & Watergirl 3", "https://hub-pro.github.io/games/fireboywatergirl/fireboywatergirl3/index.html", "Project Hub"],
+      ["Fireboy & Watergirl 4", "https://hub-pro.github.io/games/fireboywatergirl/fireboywatergirl4/index.html", "Project Hub"],
+      ["Happy Wheels", "https://hub-pro.github.io/games/happywheels/index.html", "Project Hub"],
+      ["Monopoly", "https://hub-pro.github.io/launcher.html#monopoly", "Project Hub"],
+      ["Spyro Adventure", "https://hub-pro.github.io/launcher.html#spyro_adventure", "Project Hub"],
+      ["Street Fighter 2", "https://hub-pro.github.io/launcher.html#super_street_fighter_2_turbo_revival", "Project Hub"],
+      ["Bloxorz", "https://hub-pro.github.io/games/bloxorz/index.html", "Project Hub"],
+      ["TransCube", "https://hub-pro.github.io/games/transcube/dist/index.html", "Project Hub"],
+      ["Portal: Flash", "https://hub-pro.github.io/games/portalflash/index.html", "Project Hub"],
+      ["Storm The House 2", "https://hub-pro.github.io/games/stormthehouse2/index.html", "Project Hub"],
+      ["Google Dino", "https://hub-pro.github.io/games/googledino/index.html", "Project Hub"],
+      ["FNaF 4", "https://hub-pro.github.io/games/fnaf/fnaf4/index.html", "Project Hub"],
+
+      // Class 80x
+      ["Subway Surfers", "https://class-80x.github.io/games/subway-surfers.html", "Class 80x"],
+      ["Subway Surfers New York", "https://class-80x.github.io/games/subway-surfers-new-york.html", "Class 80x"],
+      ["Among Us", "https://class-80x.github.io/games/among-us.html", "Class 80x"],
+      ["Champion Island", "https://class-80x.github.io/games/champion-island.html", "Class 80x"],
+      ["Minecraft Classic", "https://class-80x.github.io/games/minecraft-classic.html", "Class 80x"],
+      ["Minecraft Classic Hacks", "https://class-80x.github.io/games/minecraft-classic-hacks.html", "Class 80x"],
+      ["Five Nights at Freddy's", "https://class-80x.github.io/games/five-nights-at-freddy-s.html", "Class 80x"],
+      ["Geometry Dash Scratch", "https://class-80x.github.io/games/geometry-dash-scratch.html", "Class 80x"],
+      ["Mario", "https://class-80x.github.io/games/mario.html", "Class 80x"],
+      ["Mario Bros", "https://class-80x.github.io/games/mario-bros.html", "Class 80x"],
+      ["Moto X3M", "https://class-80x.github.io/games/moto-x3m.html", "Class 80x"],
+      ["Moto X3M 2", "https://class-80x.github.io/games/moto-x3m-2.html", "Class 80x"],
+      ["Moto X3M Pool", "https://class-80x.github.io/games/moto-x3m-pool.html", "Class 80x"],
+      ["Moto X3M Spooky", "https://class-80x.github.io/games/moto-x3m-spooky.html", "Class 80x"],
+      ["Moto X3M Winter", "https://class-80x.github.io/games/moto-x3m-winter.html", "Class 80x"],
+      ["Slope", "https://class-80x.github.io/games/slope.html", "Class 80x"],
+      ["Cookie Clicker", "https://class-80x.github.io/games/cookie-clicker.html", "Class 80x"],
+      ["Flappy Bird", "https://class-80x.github.io/games/flappy-bird.html", "Class 80x"],
+      ["Fruit Ninja", "https://class-80x.github.io/games/fruit-ninja.html", "Class 80x"],
+      ["Basketball Stars", "https://class-80x.github.io/games/basketball-stars.html", "Class 80x"],
+      ["Drive Mad", "https://class-80x.github.io/games/drive-mad.html", "Class 80x"],
+      ["Football Legends", "https://class-80x.github.io/games/football-legends.html", "Class 80x"],
+      ["Retro Bowl", "https://class-80x.github.io/games/retro-bowl.html", "Class 80x"],
+      ["2048", "https://class-80x.github.io/games/2048.html", "Class 80x"],
+
+      // Engineering.com
+      ["Learn2Fly", "https://www.engineering.com/games/learn2fly/", "Engineering.com"],
+      ["Run 3", "https://www.engineering.com/games/run-3/", "Engineering.com"],
+      ["Block Jam", "https://www.engineering.com/games/block-jam/", "Engineering.com"],
+      ["Block Blast", "https://www.engineering.com/games/block-blast/", "Engineering.com"],
+      ["Paper Flight", "https://www.engineering.com/games/paper-flight/", "Engineering.com"]
+    ];
+
+    const SOURCES = {
+      'sdsdadadddas.github.io': 'My Games',
+      'sz-games.github.io': 'SZ Games',
+      'hub-pro.github.io': 'Project Hub',
+      'class-80x.github.io': 'Class 80x',
+      'www.engineering.com': 'Engineering.com',
+      'games.engineering.com': 'Engineering.com',
+      'unblocked-games.s3.amazonaws.com': 'Freezenova',
+      'scratch.mit.edu': 'Scratch',
+      's3.amazonaws.com': 'Tools'
+    };
+    
+    const games = all.map(([name, url, src]) => {
+      let host = '';
+      try { host = new URL(url).hostname; } catch (e) {}
+      return [name, url, src || SOURCES[host] || host || 'Other'];
+    });
+
+    const grid = document.getElementById('grid');
+    const overlay = document.getElementById('overlay');
+    const frame = document.getElementById('frame');
+    const newtab = document.getElementById('newtab');
+    const search = document.getElementById('search');
+    const count = document.getElementById('count');
+
+    function openSite(url) {
+      frame.src = url;
+      newtab.href = url;
+      overlay.style.display = 'block';
+      window.focus(); 
+    }
+
+    const GENRES = [
+      ['Racing',  /\bcars?\b|truck|drift|drive|moto|bike|biker|race|racing|parking|rally|wheel|burnin|earn to die|taxi|stunt|rider|\bski\b|surf|kart|scrap metal|icycle/i, '\u{1F3CE}\uFE0F', ['#ff7a18', '#b3123c']],
+      ['Sports',  /soccer|football|basket|boxing|golf|bowling|8 ball|\bpool\b|penalty|volley|retro bowl|hoops|\bhead\b|heads|tennis|\bkick/i, '\u26BD', ['#22c55e', '#0f766e']],
+      ['Shooter', /\bgun|shoot|sniper|\bwar\b|bullet|tank|1v1|battle|zombie|strike|rampage|kill|assassin|weapon|missile|heist|superhot|blockpost|krunker|pixel gun|apple shooter|arcane archer|archers?\b|rooftop/i, '\u{1F52B}', ['#ef4444', '#7f1d1d']],
+      ['Idle',    /clicker|idle|simulator|tycoon|papa's|cookie|miner|empire|restaurant|townscaper|alchemy|\blife\b|bitlife|\bpou\b|sandbox|merge|trimps|space company/i, '\u{1F36A}', ['#f59e0b', '#b45309']],
+      ['Puzzle',  /2048|puzzle|sort|\bblocks?\b|cut the|match|quiz|word|solitaire|riddle|escape|prison|bank\b|diamond|airship|complex|chess|checkers|minesweeper|tetris|bloxors|bloxorz|portal|cell machine|connect|pipes|jewel|bubble|logic|plug|paper flight|ball\b|bally|physics|dark room|wheely|mini-?putt|money movers|snail bob|roper|hanger|waterworks|tower crash|\btd\b|defense|bloons|kingdom|plants vs/i, '\u{1F9E9}', ['#6366f1', '#3730a3']],
+      ['Action',  /.*/, '\u{1F579}\uFE0F', ['#06b6d4', '#7c3aed']]
+    ];
+    function genreOf(name) {
+      for (const g of GENRES) if (g[1].test(name)) return g;
+      return GENRES[GENRES.length - 1];
+    }
+
+    function makeCard(name, url, src) {
+      const b = document.createElement('button');
+      b.className = 'card';
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+      const n = document.createElement('span');
+      n.className = 'gname';
+      n.textContent = name;
+      const tag = document.createElement('span');
+      tag.className = 'tag';
+      tag.textContent = src;
+      meta.append(n, tag);
+      b.append(meta);
+      b.addEventListener('click', () => openSite(url));
+      return b;
+    }
+
+    function fill(el, list, countEl) {
+      el.innerHTML = '';
+      const frag = document.createDocumentFragment();
+      list.forEach(([name, url, src]) => frag.appendChild(makeCard(name, url, src)));
+      el.appendChild(frag);
+      if (!list.length) {
+        const p = document.createElement('p');
+        p.id = 'empty';
+        p.textContent = 'No games found.';
+        el.appendChild(p);
+      }
+      countEl.textContent = '(' + list.length + ')';
+    }
+
+    let genre = 'All';
+    const chips = document.getElementById('chips');
+    ['All'].concat(GENRES.map(g => g[0])).forEach(label => {
+      const c = document.createElement('button');
+      c.className = 'chip' + (label === 'All' ? ' active' : '');
+      const g = GENRES.find(x => x[0] === label);
+      c.textContent = (g ? g[2] + ' ' : '') + label;
+      c.addEventListener('click', () => {
+        genre = label;
+        chips.querySelectorAll('.chip').forEach(x => x.classList.toggle('active', x === c));
+        renderGames();
+      });
+      chips.appendChild(c);
+    });
+
+    let showGameSites = false;
+    const gameSitesBtn = document.getElementById('gameSitesBtn');
+    const knownGameSiteUrls = new Set([
+      'https://class-80x.github.io/',
+      'https://hub-pro.github.io/games',
+      'https://www.engineering.com/games/',
+      'https://unblocked-games.s3.amazonaws.com/index.html'
+    ]);
+
+    function renderGames() {
+      const q = search.value.trim().toLowerCase();
+      const matches = games.filter(([name, url, src]) =>
+        (name + ' ' + src).toLowerCase().includes(q) &&
+        (genre === 'All' || genreOf(name)[0] === genre) &&
+        (!showGameSites || knownGameSiteUrls.has(url)));
+      fill(grid, matches, count);
+    }
+    search.addEventListener('input', renderGames);
+    renderGames();
+
+    gameSitesBtn.addEventListener('click', () => {
+      showGameSites = !showGameSites;
+      gameSitesBtn.classList.toggle('active', showGameSites);
+      gameSitesBtn.textContent = showGameSites ? 'All Games' : 'Game Sites';
+      renderGames();
+    });
+
+    // Browsers popup menu toggle
+    const browsersBtn = document.getElementById('browsersBtn');
+    const browserPopup = document.getElementById('browserPopup');
+    function toggleBrowsersPopup(forceOpen) {
+      const open = typeof forceOpen === 'boolean' ? forceOpen : !browserPopup.classList.contains('open');
+      browserPopup.classList.toggle('open', open);
+      browsersBtn.classList.toggle('active', open);
+      browsersBtn.setAttribute('aria-expanded', String(open));
+    }
+    browsersBtn.setAttribute('aria-expanded', 'false');
+    browsersBtn.addEventListener('click', () => toggleBrowsersPopup());
+    document.getElementById('closeBrowsers').addEventListener('click', () => toggleBrowsersPopup(false));
+    
+    // Clicking Solara or Study Hub in the popup opens them like any other game
+    const browserTabs = [...document.querySelectorAll('#browserPopup .siteTab')];
+    browserTabs.forEach(tab => tab.addEventListener('click', () => {
+      openSite(tab.dataset.url);
+      toggleBrowsersPopup(false);
+    }));
+
+    document.addEventListener('click', e => {
+      if (!browserPopup.contains(e.target) && e.target !== browsersBtn) toggleBrowsersPopup(false);
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') toggleBrowsersPopup(false); });
+
+    function closeGame() {
+      overlay.style.display = 'none';
+      frame.src = 'about:blank'; 
+    }
+    document.getElementById('close').addEventListener('click', closeGame);
+
+    const ESC_FALLBACK_URL = 'https://www.powerschool.com/';
+    addEventListener('keydown', e => {
+      if (e.key !== 'Escape') return;
+      frame.src = 'about:blank'; 
+      window.close();
+      setTimeout(() => { location.replace(ESC_FALLBACK_URL); }, 150);
+    });
+
+    const CLOAK_TITLE = 'Home | Schoology';
+    const CLOAK_ICON = 'data:image/png;base64,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';
+
+    document.title = CLOAK_TITLE;
+    let iconLink = document.querySelector('link[rel~="icon"]');
+    if (!iconLink) {
+      iconLink = document.createElement('link');
+      iconLink.rel = 'icon';
+      document.head.appendChild(iconLink);
+    }
+    iconLink.type = 'image/png';
+    iconLink.href = CLOAK_ICON;
+
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+
+    function resize() {
+      canvas.width = innerWidth;
+      canvas.height = innerHeight;
+      stars = Array.from({ length: Math.floor(innerWidth * innerHeight / 7000) }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.6 + 0.3,
+        s: Math.random() * 0.4 + 0.1,
+        t: Math.random() * Math.PI * 2
+      }));
+    }
+    addEventListener('resize', resize);
+    resize();
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (const st of stars) {
+        st.y += st.s;
+        st.t += 0.03;
+        if (st.y > canvas.height) { st.y = 0; st.x = Math.random() * canvas.width; }
+        ctx.globalAlpha = 0.5 + Math.sin(st.t) * 0.4;
+        ctx.fillStyle = '#fff';
+        ctx.beginPath();
+        ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+  </script>
+</body>
+</html>
